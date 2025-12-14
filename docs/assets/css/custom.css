@@ -1,0 +1,105 @@
+
+/* -----------------------------
+   BizimPOS Docsify - Custom UI
+   ----------------------------- */
+
+:root {
+  --vp-accent: #20c997; /* teal-ish accent */
+  --vp-bg: #0f1f26;
+  --vp-bg-2: #0b171d;
+  --vp-card: rgba(255,255,255,.06);
+  --vp-border: rgba(255,255,255,.08);
+}
+
+/* make the dark theme feel closer to the app screenshot */
+body {
+  background: linear-gradient(180deg, var(--vp-bg), var(--vp-bg-2));
+}
+
+.sidebar {
+  background: linear-gradient(180deg, rgba(12, 36, 44, .95), rgba(7, 20, 25, .98));
+  border-right: 1px solid var(--vp-border);
+}
+
+.sidebar-nav li a {
+  border-radius: 10px;
+}
+
+.sidebar-nav li.active > a {
+  color: #eafff8 !important;
+  background: rgba(32,201,151,.14);
+  border: 1px solid rgba(32,201,151,.25);
+}
+
+/* "module blocks" feel */
+.sidebar-nav ul li > ul {
+  margin-left: 0;
+  padding: 10px 10px 6px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--vp-border);
+}
+
+.sidebar-nav ul li > ul li a {
+  padding-left: 28px;
+}
+
+/* top nav */
+.app-nav {
+  border-bottom: 1px solid var(--vp-border);
+  background: rgba(5, 18, 22, .75);
+  backdrop-filter: blur(10px);
+}
+
+/* version switcher pill */
+#version-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--vp-border);
+  background: rgba(255,255,255,.04);
+  margin-left: 10px;
+}
+
+#version-switcher .vs-label {
+  font-size: 12px;
+  opacity: .85;
+}
+
+#version-switcher select {
+  background: rgba(0,0,0,.25);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 999px;
+  padding: 6px 10px;
+  outline: none;
+}
+
+#version-switcher select:focus {
+  border-color: rgba(32,201,151,.6);
+  box-shadow: 0 0 0 3px rgba(32,201,151,.15);
+}
+
+.docs-footer {
+  margin-top: 40px;
+  padding: 18px 0 10px;
+  border-top: 1px dashed rgba(255,255,255,.12);
+}
+
+.docs-footer__inner {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  opacity: .9;
+  font-size: 12px;
+}
+
+.docs-footer__sep { opacity: .5; }
+
+/* nicer markdown callouts */
+.markdown-section blockquote {
+  border-left-color: rgba(32,201,151,.8);
+  background: rgba(32,201,151,.06);
+}
